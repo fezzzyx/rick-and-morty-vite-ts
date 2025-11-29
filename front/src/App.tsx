@@ -7,6 +7,8 @@ import Header from "./components/Header";
 import CharacterDetail from "@/screens/characters/CharacterDetail.tsx";
 import LocationList from "@/screens/locations/LocationList.tsx";
 import LocationDetail from "@/screens/locations/LocationDetail.tsx";
+import EpisodeList from "@/screens/episodes/EpisodeList.tsx";
+import EpisodeDetail from "@/screens/episodes/EpisodeDetail.tsx";
 
 export default function App() {
 	const routes: Array<RouteObject> = [
@@ -15,6 +17,8 @@ export default function App() {
         { path: RouterEnum.CHARACTER, element: <CharacterDetail /> },
         { path: RouterEnum.LOCATIONS, element: <LocationList /> },
         { path: RouterEnum.LOCATION, element: <LocationDetail /> },
+        { path: RouterEnum.EPISODES, element: <EpisodeList /> },
+        { path: RouterEnum.EPISODE, element: <EpisodeDetail /> },
     ]
 
     return (
