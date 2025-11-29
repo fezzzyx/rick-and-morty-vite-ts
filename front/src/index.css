@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-brand: #f7b733;
+  --color-accent: #fc4a1a;
+  --font-family-sans: 'Roboto', sans-serif;
+  --font-size-base: 1rem;
+  --spacing-4: 1rem;
+}
+
+body {
+  /*background-color: var(--color-brand);*/
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+}
+
+.accent-text {
+    color: var(--color-accent);
+}
+
+.padded-container {
+    padding: var(--spacing-4);
+}
