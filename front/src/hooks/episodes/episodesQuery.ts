@@ -1,8 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { EpisodeService } from "@/services/rick-and-morty/episode.service.ts";
 import type { Episode } from "@/types/episode.type.ts";
-import {useEpisodesFilterStore} from "@/store/useEpisodeFilterStore.ts";
-
 export const episodeQuery = (id: number | undefined) => {
     return useQuery({
         queryKey: ["episode", id],
