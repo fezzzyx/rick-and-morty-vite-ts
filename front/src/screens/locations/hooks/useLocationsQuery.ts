@@ -1,4 +1,3 @@
-// /screens/rick-and-morty/locations/hooks/useLocationsQuery.ts
 import { useQuery } from "@tanstack/react-query";
 import { LocationService } from "@/services/rick-and-morty/location.service.ts";
 import { useLocationsFilterStore } from "@/store/useLocationFilterStore.ts";

@@ -1,4 +1,3 @@
-// /screens/rick-and-morty/episodes/hooks/useEpisodesQuery.ts
 import { useQuery } from "@tanstack/react-query";
 import { EpisodeService } from "@/services/rick-and-morty/episode.service.ts";
 import { useEpisodesFilterStore } from "@/store/useEpisodeFilterStore.ts";

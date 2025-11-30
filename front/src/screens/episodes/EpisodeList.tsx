@@ -1,4 +1,3 @@
-// /screens/rick-and-morty/episodes/EpisodeList.tsx
 import { useNavigate } from "react-router";
 import { useEpisodesQuery } from "./hooks/useEpisodesQuery.ts";
 import EpisodeFilters from "@/components/EpisodeFilters.tsx";

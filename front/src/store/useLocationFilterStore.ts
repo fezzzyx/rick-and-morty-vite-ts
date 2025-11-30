@@ -1,4 +1,3 @@
-// /store/useLocationFilterStore.ts
 import { create } from "zustand";
 import { createUseStoreWithParams } from "@/hooks/useStoreWithParams.ts";
 

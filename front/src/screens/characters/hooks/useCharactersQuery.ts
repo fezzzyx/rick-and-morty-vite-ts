@@ -1,4 +1,3 @@
-// /screens/rick-and-morty/characters/hooks/useCharactersQuery.ts
 import { useQuery } from "@tanstack/react-query";
 import { CharacterService } from "@/services/rick-and-morty/character.service.ts";
 import { useCharactersFilterStore } from "@/store/useCharacterFilterStore.ts";

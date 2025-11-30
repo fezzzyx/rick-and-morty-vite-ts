@@ -5,7 +5,6 @@ import {episodeQuery} from "@/hooks/episodes/episodesQuery.ts";
 export default function EpisodeDetail() {
     const { id } = useParams<{ id: string }>();
 
-    // Fetch main episode
     const { data: episode, isLoading, isError } = episodeQuery(Number(id));
 
 
@@ -16,7 +15,6 @@ export default function EpisodeDetail() {
     return (
         <AnimatedWrapper>
             <div className="max-w-7xl mx-auto px-6 py-20 space-y-16">
-                {/* Back Button */}
                 <Link
                     to="/episodes"
                     className="inline-block mb-6 text-sky-500 font-semibold hover:underline"
@@ -24,7 +22,6 @@ export default function EpisodeDetail() {
                     &larr; Back to Episodes
                 </Link>
 
-                {/* Main Episode Info */}
                 <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row gap-8">
                     <div className="flex-1">
                         <h1 className="text-4xl font-bold text-gray-800 mb-4">{episode.name}</h1>

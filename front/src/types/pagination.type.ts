@@ -1,4 +1,3 @@
-// inst2
 export interface IInfo {
     count: number
     pages: number

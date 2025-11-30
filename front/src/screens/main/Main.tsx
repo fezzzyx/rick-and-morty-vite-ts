@@ -27,20 +27,18 @@ export default function Main() {
     };
 
     const navigate = useNavigate();
-    // Fetch first 8 characters
+
     const { data: characters, isLoading } = charactersQuery({ page: 1 });
 
     return (
         <AnimatedWrapper>
             <div className="w-full pt-24 bg-white">
 
-                {/* ===== Hero Section ===== */}
                 <section
                     className="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-16"
                     onMouseMove={handleMouseMove}
                     onMouseLeave={handleMouseLeave}
                 >
-                    {/* Left Section */}
                     <FadeInWhenVisible className="flex-1 text-center md:text-left">
                         <h1 className="text-5xl font-extrabold text-gray-800 mb-6 leading-tight">
                             Step Into the Rick & Morty Universe
@@ -59,7 +57,6 @@ export default function Main() {
                         </Link>
                     </FadeInWhenVisible>
 
-                    {/* Right Section — 3D Tilt Bubble */}
                     <FadeInWhenVisible className="flex-1 flex justify-center">
                         <div
                             className="relative"
@@ -69,10 +66,8 @@ export default function Main() {
                                 transformStyle: "preserve-3d",
                             }}
                         >
-                            {/* Glow */}
                             <div className="absolute inset-0 bg-sky-100 rounded-full blur-2xl opacity-70"></div>
 
-                            {/* Bubble */}
                             <div className="relative w-72 h-72 rounded-full bg-gradient-to-b from-sky-50 to-sky-100 shadow-xl flex items-center justify-center border border-sky-200">
                                 <img
                                     src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
@@ -106,7 +101,6 @@ export default function Main() {
                                         <p className="text-gray-500 text-sm">Status: {char.status}</p>
                                         <p className="text-gray-500 text-sm mb-2">Species: {char.species}</p>
 
-                                        {/* View Details Button */}
                                         <button
                                             onClick={() => navigate(`/characters/${char.id}`)}
                                             className="mt-2 px-4 py-2 bg-sky-500 text-white font-semibold rounded-full shadow hover:bg-sky-600 transition-all"

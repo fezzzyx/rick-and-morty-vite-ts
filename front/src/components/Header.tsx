@@ -59,7 +59,6 @@ export default function Header() {
       `}
         >
             <div className="max-w-6xl mx-auto px-4 flex items-center justify-between pointer-events-auto">
-                {/* Left: Logo */}
                 <div className="flex items-center gap-3">
                     <Link to="/">
                         <img
@@ -70,7 +69,6 @@ export default function Header() {
                     </Link>
                 </div>
 
-                {/* Center: Floating bubble nav */}
                 <nav
                     aria-label="Main navigation"
                     className={`
@@ -106,7 +104,6 @@ export default function Header() {
                     </div>
                 </nav>
 
-                {/* Right: Expanding search bubble */}
                 <div className="flex items-center gap-3 relative">
                     <div
                         className={`

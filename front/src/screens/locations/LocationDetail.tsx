@@ -8,10 +8,8 @@ export default function LocationDetail() {
     const { id } = useParams();
     const navigate = useNavigate();
 
-    // Current location
     const { data: location, isFetching } = locationQuery(Number(id));
 
-    // All locations for carousel
     const { data: allLocations } = useLocationsQuery();
 
     if (isFetching || !location) {
@@ -22,8 +20,8 @@ export default function LocationDetail() {
 
     return (
         <AnimatedWrapper>
+
             <div className="max-w-7xl mx-auto px-6 py-20">
-                {/* Main Location Info */}
                 <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
                     <h1 className="text-5xl font-extrabold text-gray-800 mb-4 text-center">{location.name}</h1>
                     <div className="flex flex-col md:flex-row justify-center gap-12 mt-6">
@@ -38,7 +36,6 @@ export default function LocationDetail() {
                     </div>
                 </div>
 
-                {/* Carousel of Other Locations */}
                 {suggested?.length ? (
                     <div>
                         <h2 className="text-3xl font-bold text-gray-800 mb-6">Other Locations</h2>

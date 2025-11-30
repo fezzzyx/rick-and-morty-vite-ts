@@ -4,7 +4,6 @@ export const api = axios.create({
     baseURL: "https://rickandmortyapi.com/api",
 });
 
-// REQUEST interceptor
 api.interceptors.request.use(
     (config) => {
 
@@ -17,7 +16,6 @@ api.interceptors.request.use(
     }
 );
 
-// RESPONSE interceptor
 api.interceptors.response.use(
     (response) => {
         console.log("Response:", response.status, response.config.url);

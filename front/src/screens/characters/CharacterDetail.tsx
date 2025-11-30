@@ -8,16 +8,13 @@ export default function CharacterDetail() {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
 
-    // Fetch main character
     const { data: character, isLoading, isError } = characterQuery(Number(id));
 
-    // Fetch suggested characters
     const { data: suggestedCharacters } = charactersQuery({ page: 1 });
 
     if (isLoading) return <p className="text-center mt-4">Loading character...</p>;
     if (isError || !character) return <p className="text-center mt-4 text-red-500">Character not found</p>;
 
-    // Filter out the current character from suggested
     const suggested = suggestedCharacters?.filter((c: Character) => c.id !== character.id).slice(0, 8);
 
 
@@ -25,7 +22,6 @@ export default function CharacterDetail() {
     return (
         <AnimatedWrapper>
             <div className="max-w-7xl mx-auto px-6 py-20 space-y-16">
-                {/* Back Button */}
                 <Link
                     to="/characters"
                     className="inline-block mb-6 text-sky-500 font-semibold hover:underline"
@@ -33,7 +29,6 @@ export default function CharacterDetail() {
                     &larr; Back to Characters
                 </Link>
 
-                {/* Main Character Info */}
                 <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row gap-8">
                     <img
                         src={character.image}
@@ -58,7 +53,6 @@ export default function CharacterDetail() {
                     </div>
                 </div>
 
-                {/* Suggested Characters */}
                 {suggested?.length ? (
                     <div>
                         <h2 className="text-2xl font-bold text-gray-800 mb-4">Suggested Characters</h2>

@@ -22,7 +22,6 @@ function PortalGunModelBase() {
         camera.position.set(0, 0, size * 0.2);
         camera.updateProjectionMatrix();
 
-        box.getCenter(gltf.scene.position).multiplyScalar(-1);
     }, [gltf, camera]);
 
 
@@ -36,8 +35,7 @@ function PortalGunModelBase() {
 export function PortalGun() {
     return (
         <Canvas
-            style={{ width: "100%", height: "500px" }}
-            camera={{ fov: 45 }}
+            style={{ width: "100%", height: "100%" }}
         >
             <ambientLight intensity={0.6} />
             <directionalLight position={[5, 5, 5]} intensity={1.2} />

@@ -1,4 +1,4 @@
-// /components/CharacterFilters.tsx
+
 import { useEffect, useState } from "react";
 import { useDebounce } from "@/hooks/useDebounce/useDebounce.ts";
 import { useCharactersFilterStoreWithParams } from "@/store/useCharacterFilterStore.ts";

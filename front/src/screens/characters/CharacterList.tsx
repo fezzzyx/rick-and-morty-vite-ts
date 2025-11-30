@@ -1,4 +1,3 @@
-// /screens/rick-and-morty/characters/CharacterList.tsx
 import { useNavigate } from "react-router";
 import { useCharactersQuery } from "./hooks/useCharactersQuery.ts";
 import CharacterFilters from "@/components/CharacterFilters.tsx";

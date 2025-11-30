@@ -11,13 +11,3 @@ export const episodeQuery = (id: number | undefined) => {
         enabled: !!id,
     });
 };
-
-export const episodesQuery = () => {
-    const filters = JSON.parse(JSON.stringify(useEpisodesFilterStore()));
-
-    return useQuery({
-        queryKey: ["episodes", filters],
-        queryFn: () =>
-            EpisodeService.getEpisodes(filters).then((res) => res.data.results as Episode[]),
-    });
-};

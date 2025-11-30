@@ -1,4 +1,3 @@
-// types/three.d.ts
 declare module "three/examples/jsm/loaders/GLTFLoader" {
     import { Loader, LoadingManager } from "three";
     import { Group } from "three";
