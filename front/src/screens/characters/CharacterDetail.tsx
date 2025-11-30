@@ -26,7 +26,7 @@ export default function CharacterDetail() {
                     to="/characters"
                     className="inline-block mb-6 text-sky-500 font-semibold hover:underline"
                 >
-                    &larr; Back to Characters
+                    &larr; Back to Characters l {/*&larr - это просто значок стрелочки*/}
                 </Link>
 
                 <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row gap-8">

@@ -19,7 +19,7 @@ export default function EpisodeDetail() {
                     to="/episodes"
                     className="inline-block mb-6 text-sky-500 font-semibold hover:underline"
                 >
-                    &larr; Back to Episodes
+                    &larr; Back to Episodes {/*&larr - это просто значок стрелочки*/}
                 </Link>
 
                 <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row gap-8">
