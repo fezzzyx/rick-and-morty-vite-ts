@@ -7,6 +7,7 @@ export const RouterEnum = {
     LOCATION: "/locations/:id",
     EPISODES: "/episodes",
     EPISODE: "/episodes/:id"
+
 }
 
 export type RouterEnum = typeof RouterEnum[keyof typeof RouterEnum];

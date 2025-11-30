@@ -9,6 +9,7 @@ import LocationList from "@/screens/locations/LocationList.tsx";
 import LocationDetail from "@/screens/locations/LocationDetail.tsx";
 import EpisodeList from "@/screens/episodes/EpisodeList.tsx";
 import EpisodeDetail from "@/screens/episodes/EpisodeDetail.tsx";
+import NotFound from "@/screens/not-found/NotFound.tsx";
 
 export default function App() {
 	const routes: Array<RouteObject> = [
@@ -19,6 +20,8 @@ export default function App() {
         { path: RouterEnum.LOCATION, element: <LocationDetail /> },
         { path: RouterEnum.EPISODES, element: <EpisodeList /> },
         { path: RouterEnum.EPISODE, element: <EpisodeDetail /> },
+
+        {path: "*", element: <NotFound/>},
     ]
 
     return (
